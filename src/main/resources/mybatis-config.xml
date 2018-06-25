@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration >
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+
+    <typeAliases>
+        <package name="pers.congcong.myBatis2.pojo"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC">
+                <property name="" value=""/>
+            </transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.80.137:3306/mybatis"/>
+                <property name="username" value="scott"/>
+                <property name="password" value="tiger"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="pers.congcong.myBatis2.mappers"/>
+    </mappers>
+
+
+
+
+</configuration>
+
